@@ -24,7 +24,7 @@ This is a Python 3 implementation of Q-RR, DIANA-RR, Q-NASTYA, NASTYA-DIANA, QSG
 
 ## How to launch scripts
 
-Command examples below are expected to be executed in the bash\shell prompt in the project folder (that contains all scripts and "data" folder). In all commands, for simplicity, we set default parameters that were in our experiments. All commands were tested on MacOS and Linux.
+Command examples below are expected to be executed in the bash\shell prompt in the project folder (that contains all scripts and "data" folder). In all commands, for simplicity, we set some default test parameters. All commands were tested on MacOS and Linux.
 
 ### Preprocessing
 Before running experiments one need to do a praparation step via running a script "data\_preprocessing.py":
@@ -34,7 +34,7 @@ python3 data_preprocessing.py --dataset mushrooms --num_workers 20 --loss_func l
 ```
 
 **Parameters:**
-- --dataset:
+- --dataset - dataset name.
 - --num_workers - number of workers participation in the training.
 - --loss_func - a loss function type. In our experiments, we used only the Logistic Regression problem. 
 - --hetero: 0 or 1. Parameter 0 corresponds to the data partitioning in the default order. If one set 1, the whole dataset is firstly
@@ -44,6 +44,27 @@ If one wishes to change the setting (eg., increase number of workers) there is n
 
 ### Launching experiments
 
+## Non-local methods (QSGD, DIANA, Q-RR, and DIANA-RR)
+```
+python3 <method_name>.py --k 2 --dataset mushrooms --max_epochs 5000 --tol 1e-07 --factor 2.0 --n_w 20 --max_bits 6400000 --prb 0.1 --stepsize_type theoretical
+```
+**Parameters:**
+- --k: Parameter K of the RandK compressor.
+- --dataset - dataset name.
+- --stepsize_type: "theoretical" or "custom". At this moment, only "theoretical" is supported.
+- --max_epochs, --max_bits, --tol - stoppping criterions.
+- --factor: <float> value in $(0,+\infty)$ - constant multiplier of the theoretical stepsize.
+- --n_w - number of workers participation in the training.
+- --prb: <float> value in $(0,1]$. Proportion of batch size. For example, if \[--prb 0.1\] than the batch size of each worker is equal to 10% of the number of their local datasamples.
 
+## Local Methods (Q-NASTYA, NASTYA-DIANA, FedCOM, and FedPAQ)
+```
+python3 <method_name>.py --k 2 --dataset mushrooms --max_epochs 5000 --tol 1e-07 --factor_w 2.0 --factor_s 2.0 --n_w 20 --max_bits 6400000 --prb 0.1 --stepsize_type theoretical
+```
+**Parameters:**
+- All parameters (except stepsize multipliers) are the same as for the local methods.
+- --factor_w: <float> value in $(0,+\infty)$ - constant multiplier of the worker's stepsize.
+- --factor_s: <float> value in $(0,+\infty)$ - constant multiplier of the server's stepsize.
+ 
  ## License
  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
