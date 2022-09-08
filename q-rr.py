@@ -1,3 +1,6 @@
+"""
+version from 08.09.2022
+"""
 
 import numpy as np
 import time
@@ -174,7 +177,8 @@ for i in range(n_w):
 la = np.load(data_path + 'la.npy')
 L_0 = np.load(data_path + 'L_0.npy')
 Li = np.load(data_path + 'Li.npy')
-L = np.load(data_path + 'L.npy')
+L_max_axis1 = np.load(data_path + 'L_max_axis1.npy')
+L_max = np.load(data_path + 'L_max.npy')
 mu = np.load(data_path + 'mu.npy')
 
 x_0 = np.array(np.load(data_path + 'w_init_{0}_{1}.npy'.format(loss_func, dataset)), dtype=np.float64)
@@ -189,7 +193,7 @@ omega = dim/k_rk - 1
 batch_ar = np.array([int(prb*X_ar[i].shape[0]) for i in range(n_w)])
 
 if stepsize_type=="theoretical":
-    stepsize_base = 1/(np.max(L)*(1 + 2*omega/n_w))
+    stepsize_base = 1/(L_max*(1 + 2*omega/n_w))
 
 step_size = np.float64(stepsize_base*factor)
 n_its_in_epoch = int(1/prb)

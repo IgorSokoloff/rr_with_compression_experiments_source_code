@@ -1,6 +1,7 @@
 """
 A script for the data preprocessing
 It takes the given dataset and outomes the partition
+version from 08.09.2022
 """
 
 import numpy as np
@@ -41,9 +42,10 @@ is_minimize = args.is_minimize
 #debug section
 '''
 num_workers = 20
-dataset = 'a9a_hetero'
-dataset = 'w8a_hetero'
-#dataset = 'mushrooms_hetero'
+dataset = 'a9a'
+dataset = 'w8a'
+dataset = 'mushrooms'
+#dataset = 'gisette'
 loss_func = 'log-reg'
 hetero = 1
 is_minimize = 0
@@ -164,20 +166,32 @@ mu = 2*la
 L_0 = np.float64(linalg.eigh(a=hess_f_non_reg + la*regularizer_hess(any_vector), eigvals_only=True, turbo=True, type=1, eigvals=(d_0-1, d_0-1))[0])
 
 Li = np.zeros(num_workers, dtype=np.float64)
-L = []
+L_max_axis1 = np.zeros(num_workers, dtype=np.float64)
 n = np.zeros(num_workers, dtype=int)
 d = np.zeros(num_workers, dtype=int)
 for i in range(num_workers):
     n[i], d[i] = X[i].shape
     hess_f_i = logreg_hess_non_reg(any_vector, X[i], y[i]) + la*regularizer_hess(any_vector)
     Li[i] = np.float64(linalg.eigh(a=hess_f_i, eigvals_only=True, turbo=True, type=1, eigvals=(d[i]-1, d[i]-1))[0])
-    L.append([])
-    for j in range(n[i]):
-        L[i].append(linalg.eigh(a= np.outer(X[i][j],X[i][j])/4 + la*regularizer_hess(any_vector), eigvals_only=True, turbo=True, type=1, eigvals=(d[i]-1, d[i]-1))[0])
+    #test section {
+    '''
+    print(i)
+    X_i_j_s = [X[i][j] for j in range(n[i])]
+    a_s = [np.outer(X[i][j],X[i][j])/4 + la*regularizer_hess(any_vector) for j in range(n[i])]
+    a_s_check = [np.allclose(a_s[j-1], a_s[j]) for j in range(1, n[i])]
+    L_axis1 = [np.float64(linalg.eigh(a= a_s[j], eigvals_only=True, turbo=True, type=1, eigvals=(d[i]-1, d[i]-1))[0]) for j in range(n[i])]
+    L_max_axis1[i] = max(L_axis1)
+    '''
+    # test section }
+    L_max_axis1[i] = max([np.float64(linalg.eigh(a= np.outer(X[i][j],X[i][j])/4 + la*regularizer_hess(any_vector), eigvals_only=True, turbo=True, type=1, eigvals=(d[i]-1, d[i]-1))[0]) for j in range(n[i])])
+
+L_max = np.max(L_max_axis1)
+
 np.save(data_path + 'la', la)
 np.save(data_path + 'L_0', L_0)
 np.save(data_path + 'Li', Li)
-np.save(data_path + 'L', L)
+np.save(data_path + 'L_max_axis1', L_max_axis1)
+np.save(data_path + 'L_max', L_max)
 np.save(data_path + 'mu', mu)
 dim = X_0.shape[1]
 x_0 = np.zeros(dim, dtype=np.float64)

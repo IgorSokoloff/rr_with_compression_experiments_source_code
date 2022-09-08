@@ -1,3 +1,6 @@
+"""
+version from 08.09.2022
+"""
 
 import numpy as np
 import time
@@ -186,7 +189,8 @@ for i in range(n_w):
 la = np.load(data_path + 'la.npy')
 L_0 = np.load(data_path + 'L_0.npy')
 Li = np.load(data_path + 'Li.npy')
-L = np.load(data_path + 'L.npy')
+L_max_axis1 = np.load(data_path + 'L_max_axis1.npy')
+L_max = np.load(data_path + 'L_max.npy')
 mu = np.load(data_path + 'mu.npy')
 
 x_0 = np.array(np.load(data_path + 'w_init_{0}_{1}.npy'.format(loss_func, dataset)), dtype=np.float64)
@@ -201,8 +205,6 @@ omega = dim/k_rk - 1
 alpha = 1/(omega+1)
 n_its_in_epoch = int(1/prb)
 batch_ar = np.array([int(prb*X_ar[i].shape[0]) for i in range(n_w)])
-
-L_max = np.max(L)
 
 stepsize_base_worker = 1/(16*n_its_in_epoch*L_max)
 stepsize_base_server = min(alpha/(2*mu), 1/(16*L_max*(1 + 9*omega/n_w)))
