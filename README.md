@@ -1,6 +1,6 @@
 # Federated Optimization Algorithms with Random Reshuffling and Gradient Compression
 
-This is a Python 3 code for the experiments with Q-RR, DIANA-RR, Q-NASTYA, NASTYA-DIANA, QSGD, DIANA, FedCOM and FedPAQ algorithms from the [paper](https://arxiv.org/abs/2206.07021).
+This is a Python 3 code for the experiments with Q-RR, DIANA-RR, Q-NASTYA, NASTYA-DIANA algorithms from the [paper](https://arxiv.org/abs/2206.07021) and [QSGD](https://arxiv.org/pdf/1610.02132.pdf), [DIANA](https://arxiv.org/pdf/1901.09269.pdf), [FedCOM](http://proceedings.mlr.press/v130/haddadpour21a/haddadpour21a.pdf) and [FedPAQ](http://proceedings.mlr.press/v108/reisizadeh20a/reisizadeh20a.pdf).
 
  ## Reference
  In case you find the methods or code useful for your research, please consider citing
