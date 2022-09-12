@@ -1,9 +1,9 @@
 # Federated Optimization Algorithms with Random Reshuffling and Gradient Compression
 
-This is a Python 3 implementation of Q-RR, DIANA-RR, Q-NASTYA, NASTYA-DIANA, QSGD, DIANA, FedCOM and FedPAQ algorithms from the [paper](https://arxiv.org/abs/2206.07021).
+This is a Python 3 code for the experiments with Q-RR, DIANA-RR, Q-NASTYA, NASTYA-DIANA, QSGD, DIANA, FedCOM and FedPAQ algorithms from the [paper](https://arxiv.org/abs/2206.07021).
 
  ## Reference
- In case you find the method or code useful for your research, please consider citing
+ In case you find the methods or code useful for your research, please consider citing
 
  ```
 @article{sadiev2022federated,
@@ -27,7 +27,7 @@ This is a Python 3 implementation of Q-RR, DIANA-RR, Q-NASTYA, NASTYA-DIANA, QSG
 Command examples below are expected to be executed in the bash\shell prompt in the project folder (that contains all scripts and "data" folder). In all commands, for simplicity, we set some default test parameters. All commands were tested on MacOS and Linux.
 
 ### Preprocessing
-Before running experiments one need to do a praparation step via running a script "data\_preprocessing.py":
+Before running experiments one need to do a preparation step via running a script "data\_preprocessing.py":
 
 ```
 python3 data_preprocessing.py --dataset mushrooms --num_workers 20 --loss_func log-reg --hetero 1 --is_minimize 1
@@ -35,9 +35,9 @@ python3 data_preprocessing.py --dataset mushrooms --num_workers 20 --loss_func l
 
 **Parameters:**
 - --dataset - dataset name.
-- --num_workers - number of workers participation in the training.
+- --num_workers - number of workers participating in the training.
 - --loss_func - a loss function type. In our experiments, we used only the Logistic Regression problem. 
-- --hetero: 0 or 1. Parameter 0 corresponds to the data partitioning in the default order. If one set 1, the whole dataset is firstly
+- --hetero: 0 or 1. Parameter 0 corresponds to the data partitioning in the default order. If one sets 1, the whole dataset is firstly
 sorted in ascending order of labels, and then equally split among workers. For more detail see Appendix A in the [paper](https://arxiv.org/abs/2206.07021). That is, the choice \[--hetero 1\] relates to the more heterogeneous setting than default splitting.
 - --is_minimize: 0 or 1. For the very first run, one needs to set \[--is_minimize 1\] to estimate the solution of the problem.
 If one wishes to change the setting (eg., increase number of workers) there is no need to solve the optimization problem again, therefore one can choose \[--is_minimize 0\] for faster preprocessing.
@@ -54,7 +54,7 @@ python3 <method_name>.py --k 2 --dataset mushrooms --max_epochs 5000 --tol 1e-07
 - --stepsize_type: "theoretical" or "custom". At this moment, only "theoretical" is supported.
 - --max_epochs, --max_bits, --tol - stoppping criterions.
 - --factor: <float> value in $(0,+\infty)$ - constant multiplier of the theoretical stepsize.
-- --n_w - number of workers participation in the training.
+- --n_w - number of workers participating in the training.
 - --prb: <float> value in $(0,1]$. Proportion of batch size. For example, if \[--prb 0.1\] than the batch size of each worker is equal to 10% of the number of their local datasamples.
 
 ## Local Methods (Q-NASTYA, NASTYA-DIANA, FedCOM, and FedPAQ)
