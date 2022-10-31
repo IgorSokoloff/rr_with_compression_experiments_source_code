@@ -1,0 +1,53 @@
+python run.py\
+ --global-lr "${g_lr}"\
+ --local-lr "1"\
+ --run-id "qsgd_${g_lr}_${job_id}"\
+ --logfile "../logs/qsgd_${g_lr}.txt"\
+ --out "qsgd_${g_lr}.bin"\
+ --algorithm "dcgd"\
+ --rounds "10000"\
+ --gpu "0"\
+ --comment ""\
+ --client-sampling-type "uniform"\
+ --num-clients-per-round "10"\
+ --global-optimiser "sgd"\
+ --global-weight-decay "0.0"\
+ --number-of-local-iters "1"\
+ --run-local-steps\
+ --batch-size "600"\
+ --local-optimiser "sgd"\
+ --local-weight-decay "0.0"\
+ --dataset "${dataset}"\
+ --loss "crossentropy"\
+ --model "tv_resnet18"\
+ --per-round-clean-torch-cache \
+ --turn-off-batch-normalization-and-dropout \
+ --use-pretrained \
+ --train-last-layer \
+ --metric "top_1_acc"\
+ --global-regulizer "cvx_l2norm_square_div_2" \
+ --global-regulizer-alpha "0.0001" \
+ --checkpoint-dir "../check_points"\
+ --do-not-save-eval-checkpoints \
+ --data-path "../data/"\
+ --log-gpu-usage\
+ --num-workers-train "4"\
+ --num-workers-test "4"\
+ --deterministic\
+ --manual-init-seed "123"\
+ --manual-runtime-seed "1"\
+ --group-name ""\
+ --eval-every "100"\
+ --eval-async-threads "0"\
+ --save-async-threads "0"\
+ --threadpool-for-local-opt "0"\
+ --algorithm-options "internal_sgd:sgd-multi,tau:10%"\
+ --client-compressor "randk:5%"\
+ --extra-track "full_gradient_norm_train,full_objective_value_train,full_gradient_norm_val,full_objective_value_val"\
+ --allow-use-nv-tensorcores\
+ --initialize-shifts-policy "zero"\
+ --sort-dataset-by-class-before-split \
+ --wandb-key "${wandb_key}"\
+ --wandb-project-name "${wandb_project}"\
+ --loglevel "debug"\
+ --logfilter ".*"
