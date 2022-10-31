@@ -27,7 +27,8 @@ In case you find the methods or code useful for your research, please consider c
 * [Abdurakhmon Sadiev](https://www.researchgate.net/profile/Abdurakhmon-Sadiev)
 * [Grigory Malinovsky](https://grigory-malinovsky.github.io/)
 * [Eduard Gorbunov](https://eduardgorbunov.github.io/)
-* [Igor Sokolov](https://cemse.kaust.edu.sa/people/person/igor-sokolov), [Ahmed Khaled](https://rka97.github.io/)
+* [Igor Sokolov](https://cemse.kaust.edu.sa/people/person/igor-sokolov)
+* [Ahmed Khaled](https://rka97.github.io/)
 * [Prof. Peter Richtarik](https://richtarik.org/) 
 
 # Paper Abstract
