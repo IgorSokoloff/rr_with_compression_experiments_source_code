@@ -41,7 +41,7 @@ Next, to have a better fit to Federated Learning applications, we incorporate lo
 
 Next, we show how to reduce compression variance in this setting as well. Finally, we prove the convergence results for the proposed methods and outline several settings in which they improve upon existing algorithms.
 
-# Materials for Refresh or Gain knowledge to Read the Code
+# Reference Materials that will help to Read the code
 
 We would like to provide several resources of information regarding technologies that has been used during creating experimental part. If you have Matlab or R background you may found this usefull.
 
@@ -79,8 +79,8 @@ https://github.com/burlachenkok/flpytorch - Opensource software suite based on P
 
 <table style="text-align:center;">
 <tr>
-<td style="padding:15px;text-align:center;vertical-align:middle;"> <img height="100px" src="https://burlachenkok.github.io/materials/KAUST-logo.png"/> </td> 
-<td style="padding:15px;text-align:center;vertical-align:middle;"> <img height="100px" src="https://burlachenkok.github.io/materials/mipt-logo.png"/> </td> 
-<td style="padding:15px;text-align:center;vertical-align:middle;"> <img height="75px" src="https://burlachenkok.github.io/materials/princeton-university-logo.png"/> </td>
+<td style="padding:15px;text-align:center;vertical-align:middle;"> <img height="100px" src="https://github.com/IgorSokoloff/rr_with_compression_experiments_source_code/blob/main/imgs/KAUST-logo.png"/> </td> 
+<td style="padding:15px;text-align:center;vertical-align:middle;"> <img height="100px" src="https://github.com/IgorSokoloff/rr_with_compression_experiments_source_code/blob/main/imgs/mipt-logo.png"/> </td> 
+<td style="padding:15px;text-align:center;vertical-align:middle;"> <img height="75px" src="https://github.com/IgorSokoloff/rr_with_compression_experiments_source_code/blob/main/imgs/princeton-university-logo.png"/> </td>
 </tr>
 </table>
