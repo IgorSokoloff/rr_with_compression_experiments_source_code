@@ -49,7 +49,6 @@ Python Relative Material |
 --- |
 https://docs.python.org/3/tutorial/ - Python Tutorial. Originally written by Guido van Rossum (original author of this language).
 https://docs.python.org/3.8/reference/index.html - Python Language Reference.
-https://docs.python.org/3/reference/datamodel.html#emulating-callable-objects - HTML page with a detailed description of different built-in functions for user-defined class.
 https://docs.python.org/3/library/stdtypes.html - Built-in types.
 https://book.pythontips.com/en/latest/index.html - Python tricks.
 
@@ -57,7 +56,7 @@ Numpy Relative Material
 --- |
 https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html - Tutorial for people familiar with MATLAB switch to Numpy.
 http://docs.scipy.org/doc/numpy/reference/ - Numpy reference.
-http://docs.scipy.org/doc/numpy/reference/routines.math.html - The full list of mathematical functions provided by numpy in: 
+http://docs.scipy.org/doc/numpy/reference/routines.math.html - The full list of mathematical functions provided by Numpy.
 http://docs.scipy.org/doc/numpy/reference/routines.array-manipulation.html - The full list of Numpy functions for manipulating arrays.
 https://numpy.org/doc/stable/user/basics.broadcasting.html - Numpy broadcasting explanation.
 
@@ -73,7 +72,7 @@ https://pytorch.org/tutorials/beginner/ptcheat.html -  The PyTorch Cheat Sheet
 https://pytorch.org/docs/stable/torch.html -  PyTorch API
 
 FL_PyTorch Relative Material |
---- | --- |
+--- |
 https://github.com/burlachenkok/flpytorch - Opensource software suite based on PyTorch to support efficient simulated Federated Learning experiments.
 
 ----
