@@ -55,32 +55,32 @@ Next, we show how to reduce compression variance in this setting as well. Finall
 
 We would like to provide several resources of information regarding technologies that has been used during creating experimental part. If you have Matlab or R background you may found this usefull.
 
-Python Relative Material |
---- |
-https://docs.python.org/3/tutorial/ - Python Tutorial. Originally written by Guido van Rossum (original author of this language).
-https://docs.python.org/3.8/reference/index.html - Python Language Reference.
-https://docs.python.org/3/library/stdtypes.html - Built-in types.
-https://book.pythontips.com/en/latest/index.html - Python tricks.
+**Python Relative Material**
 
-Numpy Relative Material
---- |
-https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html - Tutorial for people familiar with MATLAB switch to Numpy.
-http://docs.scipy.org/doc/numpy/reference/ - Numpy reference.
-http://docs.scipy.org/doc/numpy/reference/routines.math.html - The full list of mathematical functions provided by Numpy.
-http://docs.scipy.org/doc/numpy/reference/routines.array-manipulation.html - The full list of Numpy functions for manipulating arrays.
-https://numpy.org/doc/stable/user/basics.broadcasting.html - Numpy broadcasting explanation.
+* https://docs.python.org/3/tutorial/ - Python Tutorial. Originally written by Guido van Rossum (original author of this language).
+* https://docs.python.org/3.8/reference/index.html - Python Language Reference.
+* https://docs.python.org/3/library/stdtypes.html - Built-in types.
+* https://book.pythontips.com/en/latest/index.html - Python tricks.
 
-Matplotlib Relative Material |
---- |
-https://matplotlib.org/2.0.2/api/pyplot_api.html - Matplotlib documentation.
-https://colab.research.google.com/notebooks/charts.ipynb - Matplotlib examples.
+** Numpy Relative Material**
 
-PyTorch Relative Material |
---- |
-https://pytorch.org/docs/stable/index.html - PyTorch index for several topics
-https://pytorch.org/tutorials/beginner/ptcheat.html -  The PyTorch Cheat Sheet
-https://pytorch.org/docs/stable/torch.html -  PyTorch API
+* https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html - Tutorial for people familiar with MATLAB switch to Numpy.
+* http://docs.scipy.org/doc/numpy/reference/ - Numpy reference.
+* http://docs.scipy.org/doc/numpy/reference/routines.math.html - The full list of mathematical functions provided by Numpy.
+* http://docs.scipy.org/doc/numpy/reference/routines.array-manipulation.html - The full list of Numpy functions for manipulating arrays.
+* https://numpy.org/doc/stable/user/basics.broadcasting.html - Numpy broadcasting explanation.
 
-FL_PyTorch Relative Material |
---- |
-https://github.com/burlachenkok/flpytorch - Opensource software suite based on PyTorch to support efficient simulated Federated Learning experiments.
+** Matplotlib Relative Material **
+
+* https://matplotlib.org/2.0.2/api/pyplot_api.html - Matplotlib documentation.
+* https://colab.research.google.com/notebooks/charts.ipynb - Matplotlib examples.
+
+** PyTorch Relative Material **
+
+* https://pytorch.org/docs/stable/index.html - PyTorch index for several topics
+* https://pytorch.org/tutorials/beginner/ptcheat.html -  The PyTorch Cheat Sheet
+* https://pytorch.org/docs/stable/torch.html -  PyTorch API
+
+** FL_PyTorch Relative Material **
+
+* https://github.com/burlachenkok/flpytorch - Opensource software suite based on PyTorch to support efficient simulated Federated Learning experiments.
