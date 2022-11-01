@@ -6,7 +6,7 @@ This is a repository with Python 3 source code for the experimental part of the 
 
 Path | Description
 --- | --- |
-[logistic_regression](logistic_regression)  |  Experiments for Training L2 Regulirized Logistic Regression in LIBSVM datasets across 20 clients.
+[logistic_regression](logistic_regression)  |  Experiments for Training Machine Learnin Model: L2 Regulirized Logistic Regression on LIBSVM datasets across 20 clients.
 [neural_nets](neural_nets)  | Experiments for Training Deep Neural Network model: ResNet-18 on CIFAR-10 across 10 clients.
 ----
 
