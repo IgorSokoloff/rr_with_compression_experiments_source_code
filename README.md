@@ -47,6 +47,7 @@ Next, we show how to reduce compression variance in this setting as well. Finall
 <table style="text-align:center;">
 <tr>
 <td style="padding:15px;text-align:center;vertical-align:middle;"> <img height="100px" src="https://github.com/IgorSokoloff/rr_with_compression_experiments_source_code/blob/main/imgs/KAUST-logo.png"/> </td> 
+<td style="padding:15px;text-align:center;vertical-align:middle;"> <img height="75px" src="https://github.com/IgorSokoloff/rr_with_compression_experiments_source_code/blob/main/imgs/MBZUAI_Logo.png"/> </td>
 <td style="padding:15px;text-align:center;vertical-align:middle;"> <img height="100px" src="https://github.com/IgorSokoloff/rr_with_compression_experiments_source_code/blob/main/imgs/mipt-logo.png"/> </td> 
 <td style="padding:15px;text-align:center;vertical-align:middle;"> <img height="75px" src="https://github.com/IgorSokoloff/rr_with_compression_experiments_source_code/blob/main/imgs/princeton-university-logo.png"/> </td>
 </tr>
